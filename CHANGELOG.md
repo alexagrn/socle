@@ -1,5 +1,18 @@
 # Changelog
 
+## [4.8.0](https://github.com/cloud-pi-native/socle/compare/v4.7.0...v4.8.0) (2026-04-13)
+
+
+### Features
+
+* add backend and strangler config to the console app ([6381ad3](https://github.com/cloud-pi-native/socle/commit/6381ad3d51dd620e9f0978ceaf37000df378749e))
+* use static version for helm charts ([f12a331](https://github.com/cloud-pi-native/socle/commit/f12a331caa87145771533f4fd06799a6f0c1feb2))
+
+
+### Bug Fixes
+
+* harbor admin password format fix ([b0e8f7f](https://github.com/cloud-pi-native/socle/commit/b0e8f7fd5a64b91a414ee5875678061e43a3001a))
+
 ## [4.7.0](https://github.com/cloud-pi-native/socle/compare/v4.6.0...v4.7.0) (2026-03-30)
 
 
