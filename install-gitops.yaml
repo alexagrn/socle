@@ -28,9 +28,20 @@
         - prom
       when: dsc.prometheus.crd.type == 'managed'
 
+    - role: kyverno
+      tags:
+        - kyverno
+        - never
+
     - role: cloudnativepg
       tags:
         - cloudnativepg
+        - never
+
+    - role: cert-manager
+      tags:
+        - cert-manager
+        - cm
         - never
 
     - role: infra/keycloak-infra

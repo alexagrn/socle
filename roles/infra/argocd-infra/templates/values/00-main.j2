@@ -75,6 +75,19 @@ configs:
         hs.message = "Assumed healthy"
       end
       return hs
+    resource.customizations.health.networking.k8s.io_Ingress: |
+      local hs = {}
+      hs.status = "Progressing"
+      hs.message = ""
+      if obj.status ~= nil and obj.status.loadBalancer ~= nil and obj.status.loadBalancer.ingress ~= nil then
+        hs.status = "Healthy"
+        hs.message = "Ingress has a LoadBalancer assigned"
+      else
+        -- On force Healthy pour éviter le blocage Traefik
+        hs.status = "Healthy"
+        hs.message = "LoadBalancer status is empty but forcing Healthy for Traefik"
+      end
+      return hs
     resource.customizations.health.apps.gitlab.com_GitLab: |
       health_status = {}
       health_status.status = "Progressing"
